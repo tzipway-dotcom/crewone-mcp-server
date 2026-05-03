@@ -1,0 +1,52 @@
+{
+  "name": "@crewone/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP (Model Context Protocol) server for CrewOne — lets Claude Desktop, Cursor, ChatGPT, and other MCP-aware AI agents query Taiwan film equipment rates, studios, photographer style references, MV director references, and (with API key) generate full pre-production packages.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "crewone",
+    "filmmaking",
+    "preproduction",
+    "anthropic",
+    "claude"
+  ],
+  "homepage": "https://github.com/tzipway-dotcom/crewone-mcp-server",
+  "bugs": {
+    "url": "https://github.com/tzipway-dotcom/crewone-mcp-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tzipway-dotcom/crewone-mcp-server.git"
+  },
+  "author": "Way Directs <tzipway@gmail.com> (https://crewone.ai)",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "crewone-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
